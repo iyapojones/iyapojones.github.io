@@ -1,0 +1,173 @@
+@media only screen and (min-width: 768px) {
+
+  /* HTML and Body Styles */
+
+  html {
+     background: rgb(247, 247, 247) url("spidey3.jpg") top right repeat;
+  }
+
+  body {
+    display: block;
+    width: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: normal;
+    object-position: center;
+ }
+
+  /* Navigation List Styles */
+
+  nav {
+    width: 100%;
+ }
+
+  nav li {
+    width: 25%;
+    float: left;
+    text-align: center;
+    background-color: black;
+ }
+
+  nav li a {
+    text-decoration: none;
+    font-size: 1.8em;
+    color: white;
+ }
+
+ /* Header Styles */
+
+ header {
+   border-bottom: 1px solid black;
+   clear: both;
+   text-align: center;
+ }
+
+ /* Figure Box Styles */
+
+ figure {
+   display: none;
+   float: left;
+ }
+
+ /* Section Styles */
+
+ section#main {
+   float: left;
+   width: 45%;
+   margin-top: 20px;
+   background-color: grey;
+   opacity: 0.7;
+   font-weight: bold;
+   line-height: 2em;
+   font-size: 1.8em;
+ }
+
+ section p {
+   margin: 0px 0px 20px 0px;
+ }
+
+ section#main p:first-of-type:first-letter {
+   font-size: 4em;
+   float: left;
+   margin: 15px 5px 5px 0px;
+   font-family: "Times New Roman", serif;
+ }
+
+ /* Poem Styles */
+
+ section.poem {
+   width: 45%;
+   clear: none;
+   float: left;
+   padding-left: 10px;
+ }
+
+ section.poem h2 {
+   font-size: 1.4em;
+   letter-spacing: 7px;
+   font-weight: normal;
+   margin-bottom: 10px;
+ }
+
+ section.poem:first-of-type {
+   border-left: 1px solid black;
+ }
+
+ footer {
+   clear: both;
+   text-align: center;
+   font-weight: bold;
+   font-size: 2em;
+ }
+}
+
+body {
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+header, footer {
+  width: 100%;
+}
+
+aside {
+  flex: 1 1 120px;
+}
+
+section#main {
+  flex: 3 1 361px;
+}
+
+section#topics {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+section#topics article {
+  -webkit-flex: 1 1 200px;
+  flex: 1 1 200px;
+}
+
+/* =========================
+   Mobile Styles: 0 to 480px
+   =========================
+*/
+
+@media only screen and (max-width: 480px) {
+
+  aside {
+    -webkit-order: 99;
+    order: 99;
+  }
+
+  footer {
+    -webkit-order:100;
+    order: 100;
+  }
+
+}
+
+/* ============================================
+   Tablet and Desktop Styles: 481px and greater
+   ============================================
+*/
+
+@media only screen and (min-width: 481px) {
+
+  nav.horizontal ul {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+  }
+
+  nav.horizontal li {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+}
